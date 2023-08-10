@@ -64,3 +64,5 @@ dd([
 ]);
 
 ```
+
+If your input data from the API is in the form of child objects, you must mark them in the config file with `.` Separate from each other. Like the sample code in the config file
