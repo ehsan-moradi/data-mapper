@@ -1,0 +1,33 @@
+{
+    "name": "ehsanmoradi/data-mapper",
+    "description": "data mapper",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "EhsanMoradi\\DataMapper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ehsan moradi",
+            "email": "ehsanmoradi.a@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "illuminate/support": "^8.0|^9.0|^10.0",
+        "mtownsend/xml-to-array": "^2.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EhsanMoradi\\DataMapper\\Providers\\MapperServiceProvider"
+            ]
+        }
+    }
+}
