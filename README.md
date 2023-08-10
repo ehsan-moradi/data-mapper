@@ -25,24 +25,7 @@ return [
         'birthdayDate' => 'birthday',
     ],
 
-    'nested' => [
-        'plate'              => 'plate',
-        'include'            => 'include',
-        'brickEachThen'      => 'brick.each.then',
-        'brickEachExamine'   => 'brick.each.examine',
-        'brickEachSoil'      => 'brick.each.soil',
-        'brickEachSpeed'     => 'brick.each.speed',
-        'brickEachTherefore' => 'brick.each.therefore',
-        'brickEachLearn'     => 'brick.each.learn',
-        'brickPeriod'        => 'brick.period',
-        'brickEntirely'      => 'brick.entirely',
-        'brickDevelop'       => 'brick.develop',
-        'brickWeek'          => 'brick.week',
-        'brickWent'          => 'brick.went',
-        'win'                => 'win',
-        'lay'                => 'lay',
-        'beat'               => 'beat',
-    ]
+  // ...
 ];
 ```
 
@@ -66,3 +49,30 @@ dd([
 ```
 
 If your input data from the API is in the form of child objects, you must mark them in the config file with `.` Separate from each other. Like the sample code in the config file
+
+```php
+<?php
+
+return [
+    'nested' => [
+        'plate'              => 'plate',
+        'include'            => 'include',
+        'brickEachThen'      => 'brick.each.then',
+        'brickEachExamine'   => 'brick.each.examine',
+        'brickEachSoil'      => 'brick.each.soil',
+        'brickEachSpeed'     => 'brick.each.speed',
+        'brickEachTherefore' => 'brick.each.therefore',
+        'brickEachLearn'     => 'brick.each.learn',
+        'brickPeriod'        => 'brick.period',
+        'brickEntirely'      => 'brick.entirely',
+        'brickDevelop'       => 'brick.develop',
+        'brickWeek'          => 'brick.week',
+        'brickWent'          => 'brick.went',
+        'win'                => 'win',
+        'lay'                => 'lay',
+        'beat'               => 'beat',
+    ],
+   // ...
+];
+```
+
