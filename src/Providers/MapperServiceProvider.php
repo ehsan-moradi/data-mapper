@@ -16,6 +16,6 @@ class MapperServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__ . '/../Config/data-mapper.php' => config_path('data-mapper.php'),
-        ], 'config');
+        ], 'data-mapper');
     }
 }
