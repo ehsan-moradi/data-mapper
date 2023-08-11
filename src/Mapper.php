@@ -34,6 +34,7 @@ class Mapper
     {
         return $this->config[$methodName] ?? $methodName;
     }
+
     private function convertDataToArray($data):array
     {
         $array = $this->isJson($data) ? collect(json_decode($data))->toArray() : xml_to_array($data);
