@@ -30,9 +30,16 @@ class Mapper
         $this->config = $config;
     }
 
+    /**
+     * @throws MethodNotFoundException
+     */
     private function convertMethodNameToKey(string $methodName): string
     {
-        return $this->config[$methodName] ?? $methodName;
+        if (!isset($this->data[$methodName])){
+            throw new MethodNotFoundException("method \"{$methodName}\" not found");
+        }
+
+        return $this->config[$methodName];
     }
 
     private function convertDataToArray($data):array
@@ -42,15 +49,8 @@ class Mapper
         return Arr::dot($array);
     }
 
-    /**
-     * @throws MethodNotFoundException
-     */
     private function getValue(string $key)
     {
-        if (!isset($this->data[$key])){
-            throw new MethodNotFoundException("method \"{$key}\" not found");
-        }
-
         return $this->data[$key];
     }
 
