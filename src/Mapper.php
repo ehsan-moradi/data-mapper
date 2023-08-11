@@ -35,7 +35,7 @@ class Mapper
      */
     private function convertMethodNameToKey(string $methodName): string
     {
-        if (!isset($this->data[$methodName])){
+        if (!isset($this->config[$methodName])){
             throw new MethodNotFoundException("method \"{$methodName}\" not found");
         }
 
