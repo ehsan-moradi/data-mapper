@@ -44,7 +44,7 @@ class Mapper
 
     private function convertDataToArray($data):array
     {
-        $array = $this->isJson($data) ? collect(json_decode($data))->toArray() : xml_to_array($data);
+        $array = $this->isJson($data) ? collect(json_decode($data, true))->toArray() : xml_to_array($data);
 
         return Arr::dot($array);
     }
@@ -56,7 +56,7 @@ class Mapper
 
     private function isJson($string): bool
     {
-        json_decode($string);
+        json_decode($string, true);
 
         return json_last_error() === JSON_ERROR_NONE;
     }
